@@ -21,24 +21,22 @@ class Layout extends React.Component {
         )}
         <Content
           isSidebarVisible={showSidebar}
-          onShowSideBar={this.toggleSidebar}
+          onShowSidebar={this.toggleSidebar}
         >
           {" "}
-          Some More content Here{" "}
+          Some More content Here{""}
         </Content>
       </div>
     );
   }
 }
 
-const Content = ({ children, isSidebarVisible, onShowSidebar }) => {
-  return (
-    <div className="content">
-      {children}{" "}
-      {!isSidebarVisible && <button onClick={onShowSidebar}>Show</button>}
-    </div>
-  );
-};
+const Content = ({ children, isSidebarVisible, onShowSidebar }) => (
+  <div className="content">
+    {children}{" "}
+    {!isSidebarVisible && <button onClick={onShowSidebar}>Show </button>}
+  </div>
+);
 
 const Sidebar = ({ onHide, children }) => (
   <div className="sidebar">
